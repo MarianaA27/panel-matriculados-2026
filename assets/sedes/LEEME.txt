@@ -1,0 +1,19 @@
+FOTOGRAFIAS DE LAS SEDES (opcional)
+-----------------------------------
+Si guardas aqui una imagen con el nombre de la sede en minusculas y con guiones,
+el tablero la usara automaticamente en las tarjetas del catalogo y del mapa.
+Si no hay imagen, el sistema genera un grafico de color propio para cada sede.
+
+Formatos admitidos: .jpg  .jpeg  .png  .webp
+
+Ejemplos de nombre de archivo:
+  fraternidad-medellin.jpg
+  robledo.jpg
+  floresta.png
+  castilla.jpg
+  campus-c4ta.jpg
+  uemr-carepa.jpg
+  uemb-i-e-san-antonio-de-prado.jpg
+
+Regla: toma el nombre exacto de la sede, quita las tildes, pasa todo a minusculas
+y reemplaza cada caracter que no sea letra o numero por un guion.

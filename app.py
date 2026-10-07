@@ -1386,14 +1386,16 @@ def view_estadisticas(df_all: pd.DataFrame, df: pd.DataFrame) -> None:
     page_head("Estadisticas interactivas",
               "Cruces analiticos sobre la poblacion filtrada del periodo 2026")
 
-    fila1 = st.columns(4)
-    fila2 = st.columns([1, 1, 1, 1])
-    celdas = list(fila1) + list(fila2)
-    for celda, (col, key, label) in zip(celdas, FILTER_DEFS):
-        with celda:
-            st.multiselect(label, sorted(df_all[col].dropna().unique().tolist()),
-                           key=key, placeholder="Todos")
-    st.button("Limpiar filtros", on_click=reset_filters, key="btn_reset_est")
+    # Etiqueta fija: si cambiara con el numero de filtros, el panel se cerraria al elegir uno
+    with st.expander("Filtros de segmentacion", expanded=False):
+        fila1 = st.columns(4)
+        fila2 = st.columns([1, 1, 1, 1])
+        celdas = list(fila1) + list(fila2)
+        for celda, (col, key, label) in zip(celdas, FILTER_DEFS):
+            with celda:
+                st.multiselect(label, sorted(df_all[col].dropna().unique().tolist()),
+                               key=key, placeholder="Todos")
+        st.button("Limpiar filtros", on_click=reset_filters, key="btn_reset_est")
 
     df = apply_filters(df_all)
     filter_banner(df_all, df)
