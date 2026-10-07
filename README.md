@@ -69,19 +69,4 @@ el servidor: no contiene la seccion `[server]`, que solo sirve en ejecucion loca
 └── matriculados_2026_limpio.csv   Fuente de datos (agregala tu)
 ```
 
----
 
-## Notas metodologicas
-
-- **Georreferenciacion**: los campus principales tienen coordenadas reales.
-  Las sedes de barrio y de region usan la coordenada de la institucion
-  educativa o del municipio. El modulo de calidad de datos identifica cuales
-  son aproximadas.
-- **Mapa**: usa mosaicos publicos de Carto, sin token ni clave de servicio.
-  Requiere conexion a internet unicamente para el fondo cartografico.
-- **Completitud**: 26.608 registros estan completos en todos los campos clave.
-  Los 2.406 restantes presentan al menos un vacio, principalmente en barrio,
-  comuna y colegio de procedencia. El tablero los conserva y los reporta en
-  lugar de eliminarlos silenciosamente.
-- **Alcance**: el dataset corresponde a un unico periodo, por lo que el analisis
-  es transversal y no permite lectura de tendencia entre anos.
