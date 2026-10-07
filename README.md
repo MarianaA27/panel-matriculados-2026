@@ -1,6 +1,6 @@
 # Panel de Matriculados 2026
 
-Tablero interactivo de Business Intelligence sobre la matricula academica del
+Matricula academica del
 periodo 2026: 29.014 estudiantes, 61 sedes, 72 programas y 4 facultades.
 Construido en Python con Streamlit, Pandas y Plotly.
 
